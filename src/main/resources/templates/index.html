@@ -16,6 +16,16 @@
             margin-bottom: 2em;
         }
 
+        .definition .subject{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .definition .description{
+            padding-left: 0rem;
+        }
+
         @media screen and (min-width:1024px) {
          .container {
           max-width:960px
@@ -68,12 +78,10 @@
 <section class="section">
     <div class="container">
         <div class="definition" th:each="definition : ${definitions}">
-            <p>
-                <strong th:if='${definition.getType().getName() == "Phrase"}'>&ldquo;<span th:text="${definition.getTerm()}" />&rdquo;</strong>
-                <strong th:if='${definition.getType().getName() == "Thing"}'><i th:text="${definition.getTerm()}" /></strong>
-                <strong th:if='${definition.getType().getName() == "Action"}'>*<i th:text="${definition.getTerm()}" />*</strong>
-            </p>
-            <p th:text="${definition.getDescription()}">
+            <p th:if='${definition.getType().getName() == "Phrase"}' class="subject">&ldquo;<span th:text="${definition.getTerm()}" />&rdquo;</p>
+            <p th:if='${definition.getType().getName() == "Thing"}' class="subject"><i th:text="${definition.getTerm()}" /></p>
+            <p th:if='${definition.getType().getName() == "Action"}' class="subject">*<i th:text="${definition.getTerm()}" />*</p>
+            <p th:text="${definition.getDescription()}" class="description">
         </div>
     </div>
 </section>
