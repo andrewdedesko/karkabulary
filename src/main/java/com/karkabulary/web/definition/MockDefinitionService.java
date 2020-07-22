@@ -10,46 +10,80 @@ public class MockDefinitionService implements DefinitionService {
         final var definitions = new ArrayList<Definition>();
         definitions.add(new Definition(
                 "Demo a bag of dirty reets",
+                DefinitionType.Phrase,
                 "Demolish a bag of Doritos.  To eat a bag of Doritos."));
 
         definitions.add(new Definition(
                 "HAZEL WHO'S A DOG??!",
+                DefinitionType.Phrase,
                 "Common topic of conversation with Ms. Hazel."
         ));
 
         definitions.add(new Definition(
                 "Anne's",
+                DefinitionType.Thing,
                 "The good brand of mac and cheese.  Andrew has a weird ability to live off mac and cheese and other carbs."
         ));
 
         definitions.add(new Definition(
                 "Slam a hot dog",
+                DefinitionType.Phrase,
                 "Eat a hot dog.  Likely without a bun."
         ));
 
         definitions.add(new Definition(
                 "Starts screaming",
+                DefinitionType.Action,
                 "Likely spilled a small amount of water."
         ));
 
         definitions.add(new Definition(
                 "Want me to overflow the coffee maker?",
+                DefinitionType.Phrase,
                 "When Andrew makes coffee, the coffee maker often overflows.  Asking whether you'd like him make coffee and cause an overflow."
         ));
 
         definitions.add(new Definition(
                 "Waffelhut",
+                DefinitionType.Phrase,
                 "German word for 'waffle hat' but used to refer to regular waffles."
         ));
 
         definitions.add(new Definition(
                 "I recommend using only the finest stolen waffle makers",
-                "The waffle maker was stolen from a previous job"
+                DefinitionType.Phrase,
+                "The waffle maker was stolen from a previous job."
         ));
 
         definitions.add(new Definition(
                 "Overneath",
-            "Amalgamation of over and underneath.  As in 'I put my sweater on overneath my shirt.'"
+                DefinitionType.Phrase,
+                "Amalgamation of over and underneath.  As in 'I put my sweater on overneath my shirt.'"
+        ));
+
+        definitions.add(new Definition(
+                "Boy",
+                DefinitionType.Phrase,
+                "Synonym for any noun."
+        ));
+
+        definitions.add(new Definition(
+                "Put a boy in the boy",
+                DefinitionType.Phrase,
+                "Put food in the deep fryer."
+        ));
+
+        definitions.add(new Definition(
+                "Put some brown boys in the toaster",
+                DefinitionType.Phrase,
+                "Put some buns in the toaster."
+        ));
+
+        //
+        definitions.add(new Definition(
+                "Frauen sollten nicht fahren dürfen. Sie ruinieren alles.",
+                DefinitionType.Phrase,
+                "One of Andrew's German phrases.  Translates to 'women shouldn't be allowed to drive.  They ruin everything.'"
         ));
 
         return ImmutableList.copyOf(definitions);

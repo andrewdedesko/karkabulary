@@ -10,12 +10,34 @@
             font-size: 1.5em;
         }
 
-        h1.title{
-            font-size: 4em;
-        }
-
         .definition{
             margin-bottom: 2em;
+        }
+
+        @media screen and (min-width:1024px) {
+         .container {
+          max-width:960px
+         }
+        }
+        @media screen and (max-width:1215px) {
+         .container.is-widescreen {
+          max-width:960px
+         }
+        }
+        @media screen and (max-width:1407px) {
+         .container.is-fullhd {
+          max-width:960px
+         }
+        }
+        @media screen and (min-width:1216px) {
+         .container {
+          max-width:960px
+         }
+        }
+        @media screen and (min-width:1408px) {
+         .container {
+          max-width:960px
+         }
         }
     </style>
 </head>
@@ -26,7 +48,7 @@
             <div class="level-item has-text-centered">
                 <div>
                     <p>
-                        <h1 class="title">Karkabulary</h1>
+                        <h1 class="title is-1">Karkabulary</h1>
                     </p>
                     <p class="heading">
                         Your guide to talking with Andrew
@@ -41,7 +63,9 @@
     <div class="container">
         <div class="definition" th:each="definition : ${definitions}">
             <p>
-                <strong>&ldquo;<span th:text="${definition.getTerm()}" />&rdquo;</strong>
+                <strong th:if='${definition.getType().getName() == "Phrase"}'>&ldquo;<span th:text="${definition.getTerm()}" />&rdquo;</strong>
+                <strong th:if='${definition.getType().getName() == "Thing"}'><i th:text="${definition.getTerm()}" /></strong>
+                <strong th:if='${definition.getType().getName() == "Action"}'>*<i th:text="${definition.getTerm()}" />*</strong>
             </p>
             <p th:text="${definition.getDescription()}">
         </div>
