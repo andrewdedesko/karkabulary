@@ -1,5 +1,7 @@
 package com.karkabulary.web.controllers;
 
+import com.karkabulary.web.definition.DefinitionService;
+import com.karkabulary.web.definition.MockDefinitionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +14,11 @@ public class IndexController {
 
     @GetMapping
     public String index(Model model){
+        final DefinitionService definitionService = new MockDefinitionService();
+        final var definitions = definitionService.getDefinitions();
+
         model.addAttribute("viewCount", viewCount.incrementAndGet());
+        model.addAttribute("definitions", definitions);
         return "index.html";
     }
 }

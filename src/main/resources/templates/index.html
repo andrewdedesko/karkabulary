@@ -14,6 +14,10 @@
             font-size: 6rem;
             margin-bottom: 16px;
         }
+
+        .definition{
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +30,7 @@
                         <h1 class="title">Karkabulary</h1>
                     </p>
                     <p class="heading">
-                        Your guide to talking to Andrew
+                        Your guide to talking with Andrew
                     </p>
                 </div>
             </div>
@@ -36,42 +40,11 @@
 
 <section class="section">
     <div class="container">
-        <div class="level">
-            <div class="level-item has-text-centered">
-                <table class="table has-text-left">
-                    <tbody>
-                        <tr>
-                            <td><strong>Demo some dirty reets</strong></td>
-                            <td>Demolish a bag of Doritos.  To eat a bag of Doritos.</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>HAZEL WHO'S A DOG??!</strong></td>
-                            <td>Common topic of conversation with Ms. Hazel.</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>Anne's</strong></td>
-                            <td>The good brand of mac and cheese.<br />Andrew has a weird ability to live off mac and cheese and other carbs.</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>Slam a hot dog</strong></td>
-                            <td>Eat a hot dog.  Likely without a bun.</td>
-                        </tr>
-
-                        <tr>
-                            <td><i>Starts screaming</i></td>
-                            <td>Likely spilled a small amount of water.</td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>Want me to overflow the coffee maker?</strong></td>
-                            <td>When Andrew makes coffee, the coffee maker often overflows.<br />Asking whether you'd like him make coffee and cause an overflow.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="definition" th:each="definition : ${definitions}">
+            <p>
+                <strong>&ldquo;<span th:text="${definition.getTerm()}" />&rdquo;</strong>
+            </p>
+            <p th:text="${definition.getDescription()}">
         </div>
     </div>
 </section>
