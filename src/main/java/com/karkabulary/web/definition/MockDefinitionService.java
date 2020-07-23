@@ -79,13 +79,6 @@ public class MockDefinitionService implements DefinitionService {
                 "Put some buns in the toaster."
         ));
 
-        //
-        definitions.add(new Definition(
-                "Frauen sollten nicht fahren dürfen. Sie ruinieren alles.",
-                DefinitionType.Phrase,
-                "One of Andrew's German phrases.  Translates to 'women shouldn't be allowed to drive.  They ruin everything.'"
-        ));
-
         return ImmutableList.copyOf(definitions);
     }
 }
