@@ -20,7 +20,7 @@ public class MockDefinitionService implements DefinitionService {
         ));
 
         definitions.add(new Definition(
-                "Anne's",
+                "Annie's",
                 DefinitionType.Thing,
                 "The good brand of mac and cheese.  Andrew has a weird ability to live off mac and cheese and other carbs."
         ));
