@@ -8,6 +8,13 @@ public class MockDefinitionService implements DefinitionService {
     @Override
     public ImmutableList<Definition> getDefinitions() {
         final var definitions = new ArrayList<Definition>();
+
+        definitions.add(new Definition(
+                "Ahhhhhh sweet babies",
+                DefinitionType.Phrase,
+                "An expression of exhaustion."
+        ));
+
         definitions.add(new Definition(
                 "Demo a bag of dirty reets",
                 DefinitionType.Phrase,
