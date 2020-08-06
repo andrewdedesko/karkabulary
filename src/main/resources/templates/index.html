@@ -81,6 +81,23 @@
 
 <section class="section">
     <div class="container">
+        <nav class="level">
+            <div class="level-item has-text-centered" th:each="countdown : ${countdowns}">
+                <div>
+                    <p class="heading" th:text="${countdown.getLabel()}"/>
+                    <p class="title">
+                        <span th:text="${countdown.getDays()}" /><span>D, </span>
+                        <span th:text="${countdown.getHours()}" /><span>H, </span>
+                        <span th:text="${countdown.getMinutes()}" /><span>M</span>
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
         <div class="definition" th:each="definition : ${definitions}">
             <p th:if='${definition.getType().getName() == "Phrase"}' class="subject">&ldquo;<span th:text="${definition.getTerm()}" />&rdquo;</p>
             <p th:if='${definition.getType().getName() == "Thing"}' class="subject"><i th:text="${definition.getTerm()}" /></p>

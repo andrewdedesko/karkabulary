@@ -1,5 +1,6 @@
 package com.karkabulary.web.controllers;
 
+import com.karkabulary.web.countdown.CountdownService;
 import com.karkabulary.web.definition.DefinitionService;
 import com.karkabulary.web.definition.MockDefinitionService;
 import org.springframework.stereotype.Controller;
@@ -17,8 +18,12 @@ public class IndexController {
         final DefinitionService definitionService = new MockDefinitionService();
         final var definitions = definitionService.getDefinitions();
 
+        final CountdownService countdownService = new CountdownService();
+        final var countdowns = countdownService.getCountdowns();
+
         model.addAttribute("viewCount", viewCount.incrementAndGet());
         model.addAttribute("definitions", definitions);
+        model.addAttribute("countdowns", countdowns);
         return "index.html";
     }
 }
