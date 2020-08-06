@@ -10,6 +10,12 @@ public class MockDefinitionService implements DefinitionService {
         final var definitions = new ArrayList<Definition>();
 
         definitions.add(new Definition(
+                "T-dizzler",
+                DefinitionType.Phrase,
+                "The CN Tower"
+        ));
+
+        definitions.add(new Definition(
                 "Ahhhhhh sweet babies",
                 DefinitionType.Phrase,
                 "An expression of exhaustion."
