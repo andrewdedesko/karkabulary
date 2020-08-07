@@ -10,6 +10,12 @@ public class MockDefinitionService implements DefinitionService {
         final var definitions = new ArrayList<Definition>();
 
         definitions.add(new Definition(
+                "Double burner method",
+                DefinitionType.Phrase,
+                "Using the two large stove burners to heat a single pot or pan because a single burner doesn't produce enough heat.  Both burners are turned on to max, then Andrew alternates the pot between burners."
+        ));
+
+        definitions.add(new Definition(
                 "T-dizzler",
                 DefinitionType.Phrase,
                 "The CN Tower"
