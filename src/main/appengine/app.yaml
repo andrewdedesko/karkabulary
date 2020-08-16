@@ -8,7 +8,7 @@ handlers:
     redirect_http_response_code: 301
 
 automatic_scaling:
-  min_instances: 1
+  min_instances: 0
 
 inbound_services:
   - warmup
