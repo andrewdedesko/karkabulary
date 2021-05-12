@@ -8,10 +8,25 @@ import java.util.List;
 public class CountdownService {
     public List<CountdownDisplay> getCountdowns(){
         final var now = DateTime.now();
+        final var nextBirthday = getNextBirthday(8, 9);
         return List.of(
-                createCountdownDisplay("Andrew's awesome b-day party!", now, DateTime.parse("2020-08-08T18:00:00Z")),
-                createCountdownDisplay("Andrew's getting old", now, DateTime.parse("2020-08-09T04:00:00Z"))
+                createCountdownDisplay("Andrew's getting old", now, nextBirthday)
         );
+    }
+
+    private static DateTime getNextBirthday(int month, int day){
+        final var now = DateTime.now();
+
+        int year;
+        if(now.getMonthOfYear() < month){
+            year = now.getYear();
+        }else if(now.getMonthOfYear() == month && now.getDayOfMonth() <= day){
+            year = now.getYear();
+        }else{
+            year = now.getYear() + 1;
+        }
+
+        return new DateTime(year, month, day, 0, 0);
     }
 
     private static CountdownDisplay createCountdownDisplay(String label, DateTime currentTime, DateTime eventTime){
