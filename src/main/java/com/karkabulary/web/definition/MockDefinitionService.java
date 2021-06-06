@@ -10,6 +10,18 @@ public class MockDefinitionService implements DefinitionService {
         final var definitions = new ArrayList<Definition>();
 
         definitions.add(new Definition(
+                "Bony boy",
+                DefinitionType.Thing,
+                "Bone Shaker"
+        ));
+
+        definitions.add(new Definition(
+                "Black market boy",
+                DefinitionType.Phrase,
+                "Black market haircut"
+        ));
+
+        definitions.add(new Definition(
                 "Have a third boy",
                 DefinitionType.Phrase,
                 "Have a third beer"
