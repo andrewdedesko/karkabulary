@@ -29,7 +29,7 @@ public class CountdownService {
         return new DateTime(year, month, day, 0, 0);
     }
 
-    private static CountdownDisplay createCountdownDisplay(String label, DateTime currentTime, DateTime eventTime){
+    public static CountdownDisplay createCountdownDisplay(String label, DateTime currentTime, DateTime eventTime){
         if(eventTime.isBefore(currentTime))
             return new CountdownDisplay(label, 0, 0, 0);
 
