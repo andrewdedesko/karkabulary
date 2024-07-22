@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Karkabulary.props" />
+</Project>

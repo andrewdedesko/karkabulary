@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mF6Q45Yr29PEEba3jcp5t3ccE8YJybKYzM7rK2LQ2pNE8zuYyDeYKiNq19isB4N7KF55jReGozloC+A5b9D8tw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\adede\\source\\repos\\Karkabulary\\Karkabulary\\Karkabulary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\adede\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512"
+  ],
+  "logs": []
+}
