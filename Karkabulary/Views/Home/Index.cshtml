@@ -85,6 +85,16 @@
 
 <section class="section">
     <div class="container">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                    @await Component.InvokeAsync("YearlyEventCountdown", new { title = "Andrew's getting old", month = 8, day = 9 })
+            </div>
+        </nav>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
         @await Component.InvokeAsync("Definitions")
     </div>
 </section>
