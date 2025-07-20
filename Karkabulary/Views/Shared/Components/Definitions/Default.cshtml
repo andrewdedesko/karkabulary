@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Karkabulary.Models.Definitions.Definition>
+
+@foreach(var definition in Model) {
+    <div class="definition">
+        @if(definition.DefinitionType == Karkabulary.Models.Definitions.DefinitionType.Phrase) {
+            <p class="subject">&ldquo;@(definition.Term)&rdquo;</p>
+        }
+
+        @if(definition.DefinitionType == Karkabulary.Models.Definitions.DefinitionType.Thing) {
+            <p class="subject"><i>@definition.Term</i></p>
+        }
+
+        @if (definition.DefinitionType == Karkabulary.Models.Definitions.DefinitionType.Action) {
+            <p class="subject">*<i>@definition.Term</i>*</p>
+        }
+
+        <p>@definition.Description</p>
+    </div>
+}
